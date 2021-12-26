@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         body: Center(
           child: Container(
             child: Text(
-              "Welcome to 30 days of flutter",
+              "Build in process",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.deepPurple,
