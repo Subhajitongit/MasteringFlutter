@@ -61,7 +61,7 @@ class DetailsPage extends StatelessWidget {
                           .color(MyTheme.darkBluish)
                           .make()
                           .pOnly(top: 32),
-                      catalog.desc.text.caption(context).make()
+                      catalog.desc.text.caption(context).make(),
                     ],
                   ),
                 ),
