@@ -36,7 +36,10 @@ class DetailsPage extends StatelessWidget {
             ]),
           ),
         ),
-        appBar: AppBar(),
+        appBar: AppBar(
+          elevation: null,
+          backgroundColor: Colors.transparent,
+        ),
         body: Column(
           children: [
             Hero(

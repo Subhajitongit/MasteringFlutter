@@ -58,7 +58,9 @@ class CatalogItem extends StatelessWidget {
             ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
               "\$${catalog.price}".text.bold.xl.make(),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  VxToast.show(context, msg: "Feature coming soon!");
+                },
                 child: "Buy".text.make(),
                 style: ButtonStyle(
                     backgroundColor:
