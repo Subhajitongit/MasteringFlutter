@@ -59,7 +59,7 @@ class CatalogItem extends StatelessWidget {
               "\$${catalog.price}".text.bold.xl.make(),
               ElevatedButton(
                 onPressed: () {
-                  VxToast.show(context, msg: "Feature coming soon!");
+                  VxToast.show(context, msg: "Product Added to cart!");
                 },
                 child: "Buy".text.make(),
                 style: ButtonStyle(

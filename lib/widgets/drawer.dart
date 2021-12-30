@@ -2,6 +2,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:master_flutter/utils/routes.dart';
+import 'package:master_flutter/utils/theme.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -11,7 +14,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         child: Container(
-      color: Colors.deepPurple,
+      color: MyTheme.darkBluish,
       child: ListView(
         // ignore: prefer_const_literals_to_create_immutables
         children: [
@@ -20,25 +23,38 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 accountName: Text("Subhajit Gorai"),
                 accountEmail: Text("subhajitthisside@gmail.com"),
+                decoration: BoxDecoration(color: MyTheme.darkBluish),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(url),
                 ),
               )),
-          ListTile(
-            leading: Icon(CupertinoIcons.home, color: Colors.white),
-            title: Text("Home",
-                textScaleFactor: 1.2, style: TextStyle(color: Colors.white)),
-          ),
+          InkWell(
+              child: ListTile(
+                leading: Icon(CupertinoIcons.home, color: Colors.white),
+                title: Text("Home",
+                    textScaleFactor: 1.2,
+                    style: TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pushNamed(context, MyRoutes.home);
+                },
+              ),
+              onTap: () {}),
           ListTile(
             leading: Icon(CupertinoIcons.cart, color: Colors.white),
             title: Text("Cart",
                 textScaleFactor: 1.2, style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.pushNamed(context, MyRoutes.cart);
+            },
           ),
           ListTile(
             leading: Icon(CupertinoIcons.money_dollar_circle_fill,
                 color: Colors.white),
             title: Text("Wallet",
                 textScaleFactor: 1.2, style: TextStyle(color: Colors.white)),
+            onTap: () {
+              VxToast.show(context, msg: "Feature coming soon");
+            },
           )
         ],
       ),
